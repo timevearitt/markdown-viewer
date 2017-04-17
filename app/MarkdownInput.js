@@ -8,7 +8,7 @@ export default class MarkdownInput extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			userInput: 'xyz',
+			userInput: '# Testing H1\n## Testing *italics* \n#### TestingLists\n + Item 1 \n + Item 2  \n + Item 3',
 		};
 	}
 
@@ -16,7 +16,9 @@ export default class MarkdownInput extends React.Component {
 		this.setState(
 			{ userInput: e.target.value, }
 		);
+	}
 
+	componentDidUpdate() {
 		ReactDOM.render(
 			<MarkdownOutput name={this.state.userInput} />,
 			document.getElementById('markdownOutput')
@@ -26,7 +28,7 @@ export default class MarkdownInput extends React.Component {
     render() {
         return(
                 <textarea type="text" onChange={(e) => this.handleOnChange(e)}
-                value={this.state.userInput} rows="25" cols="50"></textarea>
+                value={this.state.userInput} rows="25" cols="50" wrap="hard"></textarea>
         );
     }
 

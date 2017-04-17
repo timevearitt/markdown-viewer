@@ -6,3 +6,4 @@ import MarkdownOutput from './MarkdownOutput';
 var app = document.getElementById("markdown");
 
 ReactDOM.render(<MarkdownInput />, markdownInput);
+ReactDOM.render(<MarkdownOutput />, markdownOutput);
