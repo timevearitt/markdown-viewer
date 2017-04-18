@@ -1,11 +1,15 @@
 {
   "name": "markdown-viewer",
   "version": "1.0.0",
-  "description": "",
+  "description": "markdown viewer",
   "main": "index.js",
+  "homepage": "https://timevearitt.github.io/markdown-viewer",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "node build.js",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +24,8 @@
     "react-dom": "^15.5.4",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.12.0"
   }
 }
